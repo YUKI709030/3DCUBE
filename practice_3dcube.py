@@ -94,7 +94,11 @@ class App:
         for a, b, in edges:
             x1, y1 , _ = screen_vertices[a]
             x2, y2, _ = screen_vertices[b]
-            pyxel.line(x1,y1,x2,y2,7)
+            if(a == farthest or b == farthest):
+                pyxel.line(x1, y1, x2, y2, 1)
+            else:
+                pyxel.line(x1, y1, x2, y2, 7)
+
 App()
 
             
